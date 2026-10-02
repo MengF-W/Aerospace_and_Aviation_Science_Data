@@ -15,7 +15,10 @@ class ApodServices:
 
             match item["media_type"]:
                 case "image":
-                    item["media_location"] =  re.findall('<IMG SRC=.*.jpg\"', item["basic_html"])[0] + "alt="+ item["alt"] + " width=\"200\" height=\"300\">"
+                    source = re.findall('<meta property="og:image:secure_url" content=.*>', item["basic_html"])[0]
+                    source = re.sub('<meta property=\"og:image:secure_url\" content=', '', source)
+                    source = re.sub('>', '', source)
+                    item["media_location"] = "<IMG SRC=" + source + "alt="+ item["alt"] + " width=\"200\" height=\"300\">"
                 case "video":
                     item["media_location"] = re.findall('<source src=.*.mp4', item["basic_html"])[0] + "\">"
 

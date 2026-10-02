@@ -4,7 +4,7 @@ It also provide a digital interface, namely the [NASA Open APIs](https://api.nas
 The APIs make NASA data, including imagery, eminently accessible to the public. 
 It provides a choice of standard web output formats, either JSON or HTML, of response format
 
-This web appilcation provides a Python-wrapper around the JSON API provided by NASA Open APIs. 
+This web application provides a Python-wrapper around the JSON API provided by NASA Open APIs. 
 At the moment the wrapper only implements the "Astronomy Picture of the Day" JSON API. 
 The response is displayed in a web browser. More different JSON API wrapper will be added in this web application in later stage.
 
@@ -37,7 +37,7 @@ The host provider might cause delay of loading
 <img width="894" height="73" alt="image" src="https://github.com/user-attachments/assets/a2d1a923-f461-4218-a124-21a04649c85d" />
 
 # API Service
-The Trending Movie API service is available. Enter https://the-aerospace-and-aviation-science-data.onrender.com/api/v1/apod_api to receive the content in JSON form of response.
+The "Astronomy Picture of the Day" List API service is available. Enter https://the-aerospace-and-aviation-science-data.onrender.com/api/v1/apod_api to receive the content in JSON form of response.
 
 <img width="1388" height="839" alt="image" src="https://github.com/user-attachments/assets/e35616ad-0f3e-454f-9f3a-6d7c163a0377" />
 

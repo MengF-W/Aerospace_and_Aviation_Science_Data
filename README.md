@@ -35,3 +35,9 @@ It has been published and can be accessed at https://the-aerospace-and-aviation-
 The host provider might cause delay of loading
 
 <img width="894" height="73" alt="image" src="https://github.com/user-attachments/assets/a2d1a923-f461-4218-a124-21a04649c85d" />
+
+# API Service
+The Trending Movie API service is available. Enter https://the-aerospace-and-aviation-science-data.onrender.com/api/v1/apod_api to receive the content in JSON form of response.
+
+<img width="1388" height="839" alt="image" src="https://github.com/user-attachments/assets/e35616ad-0f3e-454f-9f3a-6d7c163a0377" />
+

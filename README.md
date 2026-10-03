@@ -17,7 +17,8 @@ The response is displayed in a web browser. More different JSON API wrapper will
 - `python manage.py runserver` -Start the application under the root directory 
 - Enter the URL 'http://localhost:8000/' in a web browser. The result is then displayed in the web browser
 
-<img width="1893" height="1027" alt="image" src="https://github.com/user-attachments/assets/a5bc8f5b-19c7-4d65-9122-66ed5d688753" />
+<img width="1728" height="1030" alt="image" src="https://github.com/user-attachments/assets/0a1a3e16-c087-4b2f-905a-70a5e90ebb01" />
+
 
 
 # Docker Image Command
@@ -29,7 +30,8 @@ The response is displayed in a web browser. More different JSON API wrapper will
 # Publish
 It has been published and can be accessed at https://the-aerospace-and-aviation-science-data.onrender.com/
 
-<img width="1890" height="1022" alt="image" src="https://github.com/user-attachments/assets/d0149edc-88ce-422e-bb29-b29603f7a6e7" />
+<img width="1778" height="1030" alt="image" src="https://github.com/user-attachments/assets/1ccddfad-2dfd-476f-abc8-2245a2394d9b" />
+
 
 
 The host provider might cause delay of loading

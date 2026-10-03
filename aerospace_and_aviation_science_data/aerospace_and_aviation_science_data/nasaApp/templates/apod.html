@@ -6,34 +6,36 @@
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 <body>
+<div class="container">
 <h2>The NASA Astronomy Picture of the Day List</h2>
-<table>
-    <thead>
+<table class="responsive-table">
+    <thead class="table-header">
     <tr>
-        <th>Date</th>
-        <th>Title</th>
-        <th>Picture</th>
-        <th>Explanation</th>
-        <th>Credit</th>
-        <th>Copyright</th>
+        <th class="col col-1">Date</th>
+        <th class="col col-2">Title</th>
+        <th class="col col-3">Picture</th>
+        <th class="col col-4">Explanation</th>
+        <th class="col col-5">Credit</th>
+        <th class="col col-6">Copyright</th>
     </tr>
     </thead>
     <tbody>
     {% for result in result_list %}
-        <tr>
-            <td width="80">{{result.date}}</td>
-            <td>{{result.title}}</td>
+        <tr class="table-row">
+            <td width="80"  class="col col-1" data-label="Date">{{result.date}}</td>
+            <td class="col col-2" data-label="Title">{{result.title}}</td>
 			{% if result.media_type == 'image' %}
-            <td>{{result.media_location|safe}}</td>
+            <td class="col col-3" data-label="Picture">{{result.media_location|safe}}</td>
 			{% elif result.media_type == 'video' %}
-			<td><video  width="200" height="300" controls title="">{{result.media_location|safe}}</video></td>
+			<td class="col col-3" data-label="Picture"><video  width="200" height="300" controls title="">{{result.media_location|safe}}</video></td>
 			{% endif %}
-            <td>{{result.explanation|safe}}</td>
-            <td>{{result.credit|safe}}</td>
-            <td>{{result.copyright|safe}}</td>
+            <td class="col col-4" data-label="Explanation">{{result.explanation|safe}}</td>
+            <td class="col col-5" data-label="Credit">{{result.credit|safe}}</td>
+            <td class="col col-6" data-label="Copyright">{{result.copyright|safe}}</td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
+<div class="container">
 </body>
 </html>

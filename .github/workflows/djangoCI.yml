@@ -8,7 +8,7 @@ on:
 
 defaults:
  run:
-  working-directory: ./aerospace_and_aviation_science_data
+  working-directory: ./aerospace_and_aviation_science_data/aerospace_and_aviation_science_data
 
 jobs:
   build:

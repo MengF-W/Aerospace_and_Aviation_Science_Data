@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main","MengF-W-CI" ]
 
+defaults:
+ run:
+  working-directory: ./Aerospace_and_Aviation_Science_Data/aerospace_and_aviation_science_data
+
 jobs:
   build:
 

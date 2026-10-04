@@ -4,11 +4,10 @@ import re
 from typing import List
 from nasaApp.serializers import APODSerializer
 
-
 class ApodServices:
     @staticmethod
-    def get_apod_basic() -> List:
-        result = requests.get("https://science.nasa.gov/wp-json/wp/v2/apod-basic")
+    def get_apod_basic(api_client=requests) -> List:
+        result = api_client.get("https://science.nasa.gov/wp-json/wp/v2/apod-basic")
         result_item_list = []
 
         for item in result.json():

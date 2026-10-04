@@ -32,7 +32,6 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test nasaApp
-        echo 'test passed'
   
   deploy:
   
@@ -40,4 +39,5 @@ jobs:
     needs: [build]
     steps:
      - name: Set Up Deploy
+       working-directory: .
        run: echo 'ready to deploy'

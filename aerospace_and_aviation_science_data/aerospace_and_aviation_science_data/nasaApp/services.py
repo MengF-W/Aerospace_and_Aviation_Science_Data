@@ -19,7 +19,13 @@ class ApodServices:
                     source = re.sub('>', '', source)
                     item["media_location"] = "<IMG SRC=" + source + "alt="+ item["alt"] + " width=\"200\" height=\"300\">"
                 case "video":
-                    item["media_location"] = re.findall('<source src=.*.mp4', item["basic_html"])[0] + "\">"
+                    if (re.findall('<source src=.*.mp4', item["basic_html"])):
+                        item["media_location"] = re.findall('<source src=.*.mp4', item["basic_html"])[0] + "\">"
+                        item["media_type"] = "video_mp4"
+                    elif (re.findall('<iframe width=.* height=.* src=.* frameborder=.* allowfullscreen></iframe>', item["basic_html"])):
+                        item["media_location"] = re.findall('<iframe width=.* height=.* src=.*', item["basic_html"])[0]
+                        item["media_location"] = re.findall('src=.*"', item["media_location"])[0]
+                        item["media_type"] = "video_iframe"
 
             serializer = APODSerializer(data=item)
             if serializer.is_valid():

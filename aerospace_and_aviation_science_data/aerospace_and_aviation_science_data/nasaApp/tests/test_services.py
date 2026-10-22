@@ -3,6 +3,7 @@ from unittest.mock import patch, MagicMock
 from django.test import TestCase
 from nasaApp import services
 import os
+import re
 
 
 # Create your tests here.
@@ -26,5 +27,7 @@ class ApodServicesTest(TestCase):
             match result["media_type"]:
                 case "image":
                     self.assertEqual(result['media_location'], '<IMG SRC="exampleContentUrl"alt=exampleAlt width="200" height="300">')
-                case "video":
+                case "video_mp4":
                     self.assertEqual(result['media_location'], '<source src="exampleVideoUrl" type="video/mp4">')
+                case "video_iframe":
+                    self.assertEqual(result['media_location'], 'src="exampleVideoUrl" frameborder="0"')

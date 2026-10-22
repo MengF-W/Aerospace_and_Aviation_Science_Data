@@ -22,7 +22,7 @@
     <tbody>
     {% for result in result_list %}
         <tr class="table-row">
-            <td width="80"  class="col col-1" data-label="Date">{{result.date}}</td>
+            <td class="col col-1" data-label="Date">{{result.date}}</td>
             <td class="col col-2" data-label="Title">{{result.title}}</td>
 			{% if result.media_type == 'image' %}
             <td class="col col-3" data-label="Picture">{{result.media_location|safe}}</td>
@@ -31,9 +31,9 @@
 			{% elif result.media_type == 'video_iframe' %}
             <td class="col col-3" data-label="Picture"><iframe width="200" height="300" {{result.media_location|safe}} allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" data-gtm-yt-inspected-31201591_223="true" data-gtm-yt-inspected-18="true" data-gtm-yt-inspected-25="true"></iframe></td>
             {% endif %}
-            <td class="col col-4" data-label="Explanation">{{result.explanation|safe}}</td>
-            <td class="col col-5" data-label="Credit">{{result.credit|safe}}</td>
-            <td class="col col-6" data-label="Copyright">{{result.copyright|safe}}</td>
+            <td class="col col-4"  data-label="Explanation">{{result.explanation|safe}}</td>
+            <td class="col col-5" style="text-align: center; vertical-align: middle;" data-label="Credit"><font  size="1">{{result.credit|safe}}</font></td>
+            <td class="col col-6" style="text-align: center; vertical-align: middle;" data-label="Copyright"><font  size="1">{{result.copyright|safe}}</font></td>
         </tr>
     {% endfor %}
     </tbody>
